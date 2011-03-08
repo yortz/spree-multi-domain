@@ -1,5 +1,5 @@
 Product.class_eval do
-  has_and_belongs_to_many :stores
+  has_many :stores, :through => :products_stores
   scope :by_store, lambda {|store| joins(:stores).where("products_stores.store_id = ?", store)}
 end
 
