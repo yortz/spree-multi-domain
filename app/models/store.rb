@@ -2,6 +2,7 @@ class Store < ActiveRecord::Base
   has_many :products, :through => :products_stores
   has_many :taxonomies
   has_many :orders
+  has_many :products_stores
 
   validates_presence_of :name, :code, :domains
 
